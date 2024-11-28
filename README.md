@@ -92,9 +92,7 @@ InstaBoost-Bot/
 ---
 
 💡 **ارتباط با من:** اگر سوالی دارید یا به راهنمایی نیاز دارید، از طریق 
-[Arman Shahhoseini](https://github.com/arman-shahhoseini)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arman-shahhoseini-4447152a0) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arman-shahhoseini-4447152a0)     [![Email](https://img.shields.io/badge/Email-%23D14836.svg?logo=gmail&logoColor=white)](mailto:shahhoseiniarman@gmail.com) 
 
-[![Email](https://img.shields.io/badge/Email-%23D14836.svg?logo=gmail&logoColor=white)](mailto:shahhoseiniarman@gmail.com) 
 با من در ارتباط باشید 
