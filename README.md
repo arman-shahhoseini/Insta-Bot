@@ -91,10 +91,10 @@ InstaBoost-Bot/
 این پروژه توسط **[آرمان شاه حسینی]** توسعه داده شده است.  
 ---
 
-💡 **ارتباط با من:** اگر سوالی دارید یا به راهنمایی نیاز دارید، از طریق 
-[Arman Shahhoseini](https://github.com/arman-shahhoseini)
+💡 **ارتباط با من:** اگر سوالی دارید یا به راهنمایی نیاز دارید، می‌توانید از طریق لینک‌های زیر با من در ارتباط باشید:  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arman-shahhoseini-4447152a0) 
-
-[![Email](https://img.shields.io/badge/Email-%23D14836.svg?logo=gmail&logoColor=white)](mailto:shahhoseiniarman@gmail.com) 
-با من در ارتباط باشید 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arman-shahhoseini-4447152a0)  
+[![Email](https://img.shields.io/badge/Email-%23D14836.svg?logo=gmail&logoColor=white)](mailto:shahhoseiniarman@gmail.com)  
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=instagram&logoColor=white)](https://www.instagram.com/arman.shahhoseini)  
+[![Telegram](https://img.shields.io/badge/Telegram-%232CA5E0.svg?logo=telegram&logoColor=white)](https://t.me/armnre)  
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white)](https://www.youtube.com/@ArmanScript)  

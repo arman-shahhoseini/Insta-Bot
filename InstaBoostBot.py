@@ -1,5 +1,6 @@
 import logging
 import time
+from datetime import datetime, timedelta, timezone
 from instagrapi import Client
 import random
 
@@ -9,18 +10,20 @@ class InstagramBot:
         self.username = username
         self.password = password
         self.session_file = session_file
-        self.client = Client(delay_range=[20,60])
+        self.client = Client(delay_range=[20, 60])
         self._setup_logger()
-        self.processed_posts = set()  
-        self.emojis = ["👌", "🔥", "😍", "💯", "👏","✨", "❤️", "👍", "🤩", "🙌"] 
+        self.processed_posts = set()
+        self.emojis = ["👌", "🔥", "😍", "💯", "👏", "✨", "❤️", "👍", "🤩", "🙌"]
 
     def _setup_logger(self):
         """تنظیم لاگ‌گیری"""
         logging.basicConfig(
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s",
-            handlers=[logging.FileHandler("instagram_bot.log", encoding="utf-8"),
-                      logging.StreamHandler()]
+            handlers=[
+                logging.FileHandler("instagram_bot.log", encoding="utf-8"),
+                logging.StreamHandler(),
+            ],
         )
         self.logger = logging.getLogger(__name__)
 
@@ -63,7 +66,7 @@ class InstagramBot:
         post_url = post.video_url if post.video_url else "بدون ویدیو"
 
         # بررسی تعداد لایک و ویو
-        if post.like_count < 100 or post.view_count < 500:  # اگر تعداد لایک یا ویو کم بود، کامنت نده
+        if post.like_count < 100:  # اگر تعداد لایک یا ویو کم بود، کامنت نده
             self.logger.info(f"Skipping post {post_pk} due to low likes or views.")
             self.logger.info("=" * 50)
             return
@@ -91,16 +94,27 @@ class InstagramBot:
 
         self.processed_posts.add(post_pk)
 
+    def filter_recent_posts(self, posts, days=7):
+        """فیلتر کردن پست‌هایی که در بازه زمانی اخیر (تعداد روز مشخص) ارسال شده‌اند"""
+        one_week_ago = datetime.now(timezone.utc) - timedelta(days=days)  # تاریخ 7 روز قبل با توجه به UTC
+        recent_posts = [
+            post for post in posts
+            if post.taken_at and post.taken_at.replace(tzinfo=timezone.utc) > one_week_ago
+        ]
+        self.logger.info(f"Filtered {len(recent_posts)} posts from the last {days} days.")
+        return recent_posts
+
     def run(self, explore_count=1, delay=60):
         """اجرای بات"""
         self.login()
         posts = self.fetch_explore_reels(count=explore_count)
-        for post in posts:
+        recent_posts = self.filter_recent_posts(posts, days=7)  # فیلتر کردن پست‌های 7 روز اخیر
+        for post in recent_posts:
             self.process_post(post)
             time.sleep(delay)
             self.logger.info("=" * 50)
 
 
 if __name__ == "__main__":
-    bot = InstagramBot(username="your_username", password="your_password")
-    bot.run(explore_count=5, delay=60)
+    bot = InstagramBot(username="arman.script", password="&Rman1021")
+    bot.run(explore_count=200, delay=60)
