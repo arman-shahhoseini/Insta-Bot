@@ -10,7 +10,7 @@ class InstagramBot:
         self.username = username
         self.password = password
         self.session_file = session_file
-        self.client = Client(delay_range=[20, 60])
+        self.client = Client(delay_range=[1,2])
         self._setup_logger()
         self.processed_posts = set()
         self.emojis = ["👌", "🔥", "😍", "💯", "👏", "✨", "❤️", "👍", "🤩", "🙌"]
@@ -116,5 +116,5 @@ class InstagramBot:
 
 
 if __name__ == "__main__":
-    bot = InstagramBot(username="arman.script", password="&Rman1021")
-    bot.run(explore_count=200, delay=60)
+    bot = InstagramBot(username="your_username", password="your_password")
+    bot.run(explore_count=5, delay=60)
