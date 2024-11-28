@@ -97,8 +97,4 @@ InstaBoost-Bot/
 [![Email](https://img.shields.io/badge/Email-%23D14836.svg?logo=gmail&logoColor=white)](mailto:shahhoseiniarman@gmail.com)  
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=instagram&logoColor=white)](https://www.instagram.com/arman.shahhoseini)  
 [![Telegram](https://img.shields.io/badge/Telegram-%232CA5E0.svg?logo=telegram&logoColor=white)](https://t.me/armnre)  
-<<<<<<< HEAD
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white)](https://www.youtube.com/@ArmanScript)  
-=======
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white)](https://www.youtube.com/@ArmanScript)  
->>>>>>> 8f078dbf20669742ee5f6dbd0240147224fdbef3
